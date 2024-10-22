@@ -55,7 +55,7 @@ def main():
         elif opcao == '4':
             print("Opção Participantes selecionada. \n")
             print("\n\tKauã Fermino Zipf \t RM-558957")
-            print("\n\tCaetano Penafiel Bonfim \t RM-557984")
+            print("\n\tCaetano Penafiel \t RM-557984")
             print("\n\tVictor Egidio Lira \t RM-556653")
             print("\n\tDiego Bassalo \t RM-558710 ")
         elif opcao == '5':
