@@ -39,6 +39,8 @@ CREATE TABLE IF NOT EXISTS pedidos (
 
 conexao.commit()
 
+# --- Funções de CRUD ---
+
 # Funções de Produtos
 def cadastrar_produto():
     nome = input("Nome do Produto: ")
@@ -58,22 +60,23 @@ def exibir_produtos():
     produtos = cursor.fetchall()
 
     if not produtos:
-        print("Nenhum produto cadastrado.\n")
+        print("\n==================== // =====================\n")
+        print("Nenhum produto cadastrado.")
+        print("\n==================== // =====================\n")
     else:
         for produto in produtos:
-            print(" \n ============== // ============= \n")
             print(f"\nID: {produto[0]} | Nome: {produto[1]} | Preço: R${produto[2]:.2f}")
             print(f"Fabricação: {produto[3]} | Validade: {produto[4]}")
-            print("\n ============== // ============= \n")
-            
+            print("===========================")
+
 def atualizar_produto():
     exibir_produtos()
     produto_id = input("Digite o ID do produto a ser atualizado: ")
 
     nome = input("Novo nome: ")
     preco = float(input("Novo preço: "))
-    data_fabricacao = input("Nova data de fabricação (YYYY-MM-DD): ")
-    data_validade = input("Nova data de validade (YYYY-MM-DD): ")
+    data_fabricacao = input("Nova data de fabricação (DD-MM-YYYY): ")
+    data_validade = input("Nova data de validade (DD-MM-YYYY): ")
 
     cursor.execute('''
         UPDATE produtos
@@ -90,7 +93,7 @@ def deletar_produto():
     cursor.execute("DELETE FROM produtos WHERE id = ?", (produto_id,))
     conexao.commit()
     print("Produto deletado com sucesso!\n")
-
+    
 # Funções de Fornecedores
 def cadastrar_fornecedor():
     nome = input("Nome do Fornecedor: ")
@@ -111,14 +114,15 @@ def exibir_fornecedores():
     fornecedores = cursor.fetchall()
 
     if not fornecedores:
-        print("Nenhum fornecedor cadastrado.\n")
+        print("\n==================== // =====================\n")
+        print("Nenhum fornecedor cadastrado.")
+        print("\n==================== // =====================\n")
     else:
         for fornecedor in fornecedores:
-            print("\n ============== // ============= \n")
             print(f"\nID: {fornecedor[0]} | Nome: {fornecedor[1]}")
             print(f"CNPJ: {fornecedor[2]} | Telefone: {fornecedor[3]}")
             print(f"Email: {fornecedor[4]} | Endereço: {fornecedor[5]}")
-            print("\n ============== // ============= \n")
+            print("===========================")
             
 def atualizar_fornecedor():
     exibir_fornecedores()
@@ -166,14 +170,15 @@ def exibir_pedidos():
     pedidos = cursor.fetchall()
 
     if not pedidos:
-        print("Nenhum pedido cadastrado.\n")
+        print("\n==================== // =====================\n")
+        print("Nenhum pedido cadastrado.")
+        print("\n==================== // =====================\n")
     else:
         for pedido in pedidos:
-            print("\n ============== // ============= \n")
             print(f"\nID: {pedido[0]} | Cliente: {pedido[1]}")
             print(f"Produto: {pedido[2]} | Quantidade: {pedido[3]}")
             print(f"Data: {pedido[4]} | Status: {pedido[5]}")
-            print("\n ============== // ============= \n")
+            print("===========================")
             
 def atualizar_pedido():
     exibir_pedidos()
@@ -182,7 +187,7 @@ def atualizar_pedido():
     nome_cliente = input("Novo nome do cliente: ")
     produto = input("Novo produto: ")
     quantidade = int(input("Nova quantidade: "))
-    data_pedido = input("Nova data do pedido (YYYY-MM-DD): ")
+    data_pedido = input("Nova data do pedido (DD-MM-YYYY): ")
     status = input("Novo status (Pendente/Entregue/Cancelado): ")
 
     cursor.execute('''
@@ -200,3 +205,10 @@ def deletar_pedido():
     cursor.execute("DELETE FROM pedidos WHERE id = ?", (pedido_id,))
     conexao.commit()
     print("Pedido deletado com sucesso!\n")
+    
+
+
+
+
+
+
