@@ -1,0 +1,20 @@
+Tabela,ID,Nome,Preço,Data_Fabricação,Data_Validade,Telefone,Email,Cidade,Quantidade,Data_Pedido,Status
+Tabela,ID,Nome,Preço,Data_Fabricação,Data_Validade,Telefone,Email,Cidade,Quantidade,Data_Pedido,Status
+Produto,1,Produto A,10.5,2023-01-10,2024-01-10,,,,,,
+Produto,2,Produto B,25.0,2022-12-05,2024-12-05,,,,,,
+Produto,3,Produto C,50.0,2023-05-15,2025-05-15,,,,,,
+Produto,4,Produto D,75.5,2023-02-01,2024-11-01,,,,,,
+Produto,5,Produto E,100.0,2022-09-20,2024-09-20,,,,,,
+Produto,6,Produto F,200.0,2023-07-11,2025-07-11,,,,,,
+Produto,7,Produto G,300.0,2023-03-25,2024-12-25,,,,,,
+Produto,8,Produto H,400.0,2023-04-15,2025-04-15,,,,,,
+Produto,9,Produto I,500.0,2023-06-20,2026-06-20,,,,,,
+Produto,10,Produto J,600.0,2023-08-05,2024-08-05,,,,,,
+Fornecedor,1,Fornecedor 1,,,,11999990001,fornecedor1@mail.com,São Paulo,,,
+Fornecedor,2,Fornecedor 2,,,,11999990002,fornecedor2@mail.com,Rio de Janeiro,,,
+Fornecedor,3,Fornecedor 3,,,,11999990003,fornecedor3@mail.com,Salvador,,,
+Fornecedor,4,Fornecedor 4,,,,11999990004,fornecedor4@mail.com,Curitiba,,,
+Fornecedor,5,Fornecedor 5,,,,11999990005,fornecedor5@mail.com,Porto Alegre,,,
+Pedido,1,,,,,,,,3,2023-09-10,entregue
+Pedido,2,,,,,,,,1,2023-10-01,em trânsito
+Pedido,3,,,,,,,,2,2023-10-15,pendente
